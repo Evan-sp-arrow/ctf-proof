@@ -1,0 +1,4 @@
+chmod +x warm
+./warm -h
+./warm --help
+./warm -?
