@@ -1,0 +1,3 @@
+grep "FLAGPART" server.log
+grep "FLAGPART" server.log | sed "s/.*FLAGPART: //" | awk "!seen[$0]++" | tr "
+" "_" | sed "s/_$//"
