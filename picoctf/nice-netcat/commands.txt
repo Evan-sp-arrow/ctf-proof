@@ -1,4 +1,2 @@
 nc mercury.picoctf.net 22342
-# Copy the numbers output
-# Decode decimal -> ASCII (online converter or Python:
-# nums = [112,105,99,...]; print(''.join(chr(x) for x in nums))
+
