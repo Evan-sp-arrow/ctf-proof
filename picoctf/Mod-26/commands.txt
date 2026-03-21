@@ -1,0 +1,3 @@
+wget <url-to-message.txt>
+cat message.txt
+# ROT13 decode using CyberChef
