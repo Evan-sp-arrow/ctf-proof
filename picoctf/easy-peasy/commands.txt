@@ -1,0 +1,13 @@
+# Terminal 1 - Get enc_flag
+nc wily-courier.picoctf.net 64002
+# Copy: 73e7a714676a81d9bd03339392733c7af01ccb2cdd9dd3d0dac14f90655b79db
+
+# Terminal 2 - Padding attack (reset key pos to 0)
+python3 -c "print('a'*49968);print('a'*32)" | nc wily-courier.picoctf.net 64002
+# Copy enc_a's: 74e4ff4232338181eb5a31c395746b7ea01c922eda9a87d28fc54d95370d2f82
+
+# Python3 decrypt:
+ef = 0x73e7a714676a81d9bd03339392733c7af01ccb2cdd9dd3d0dac14f90655b79db
+ea = 0x74e4ff4232338181eb5a31c395746b7ea01c922eda9a87d28fc54d95370d2f82
+pa = 0x6161616161616161616161616161616161616161616161616161616161616161
+
