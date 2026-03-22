@@ -1,0 +1,7 @@
+# Download cat.jpg
+wget <challenge-url>/cat.jpg  # From picoCTF challenge page
+
+# Extract flag from EXIF License field
+exiftool cat.jpg | grep License | sed -e 's/.*: //' | base64 -d
+
+
