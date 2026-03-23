@@ -1,0 +1,15 @@
+# Clone challenge repo (use YOUR password/token)
+git clone ssh://git@foggy-cliff.picoctf.net:61450/git/challenge.git
+cd challenge
+
+# Impersonate root user
+git config user.name "root"
+git config user.email "root@picoctf"
+
+# Create and commit flag.txt
+echo "test" > flag.txt
+git add .
+git commit -m "add flag as root"
+git push  # Enter password when prompted
+
+# Server verifies: author="root:root@picoctf" + flag.txt exists → FLAG!
