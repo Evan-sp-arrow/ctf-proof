@@ -1,0 +1,13 @@
+# Connect to challenge
+nc foggy-cliff.picoctf.net 54714
+
+# Answer each step:
+1. base64 -d
+2. rev
+3. tr '-' '_'
+4. tr '()' '{}'
+5. tr 'a-zA-Z' 'n-za-mN-ZA-M'
+
+# All-in-one reverse (if given final transformed flag):
+echo "KTJxNW85NjQ1LWZhMDFnQHplMHNmYTRlRy1nazNnLXRhMWZlcmlyRShTR1BicHZj" | \
+base64 -d | rev | tr '-' '_' | tr '()' '{}' | tr 'a-zA-Z' 'n-za-mN-ZA-M'

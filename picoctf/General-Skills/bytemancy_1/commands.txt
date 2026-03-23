@@ -1,0 +1,6 @@
+# Generate 1751 'e's (ASCII 101) and send
+python3 -c "print((b'\x65' * 1751).decode())" | nc foggy-cliff.picoctf.net 49300
+
+# Alternative Python REPL:
+>>> print((b'\x65' * 1751).decode())
+# Copy output → paste into netcat
